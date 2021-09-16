@@ -1,5 +1,5 @@
 body{
-    background-image: url('/assets/shutterstock_744000451.png');
+    background-image: url('./assets/shutterstock_744000451.png');
     background-size: cover;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
@@ -14,8 +14,7 @@ h1{
     font-family: 'Luckiest Guy', cursive;
     text-shadow: 2px 2px 4px #000000;
     border: 5px solid darkgrey;
-    
-        
+            
 }
 
 p{
