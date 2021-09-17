@@ -1,14 +1,9 @@
 //1
-const baseURL = 'https://random.dog/woof.json';
-// const baseURL = 'https://api.thedogapi.com/v1/images/search';
-// const key= 'bcc617c9-6dff-4ce8-863d-3b78116bfc0e';
-
-
+const baseURL = 'https://random.dog/woof.json?filter=mp4';
 
 //2 create variables
 let randomButton = document.querySelector('button');
 let image = document.querySelector('img');
-let randomFact = document.querySelector('p');
 
 //3 create events
 randomButton.addEventListener('click', getPicture);
@@ -18,24 +13,14 @@ function getPicture(pic) {
     fetch(baseURL)                          //fetch requires one parameter which is the URL of the resource
         .then(function(randomPic){      //returns info in a json format as a promise
         return randomPic.json();
-        console.log(json)
+        // console.log(json)
     })
     .then(function(json){     //invokes results after promise resolves so we can use the json we get back
         displayResults(json);
-        console.log(json)
+        // console.log(json)
     })
     
 }
-
-// function getFact(fact){
-//     fetch(factURL + key)
-//         .then(function(factoids){
-//         return factoids.json();
-//     }).then(function(data){
-//         displayResults(data);
-//         console.log(data)
-//     })
-// }
 
 //you've pulled info now, display it
 function displayResults(json){      
@@ -45,6 +30,3 @@ function displayResults(json){
     image.alt = 'random dog image';
     
 } 
-// function displayResults(data){
-//     console.log(data.url);
-// }
